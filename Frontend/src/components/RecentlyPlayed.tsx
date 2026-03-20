@@ -59,7 +59,7 @@ function TopSongs() {
 
                 
             <ul className="grid grid-cols-1 grid-rows-3 gap-5 md:grid-cols-2 lg:grid-cols-5">
-            {recentSongs?.items.map((song, index) => (
+            {recentSongs?.items.map((song) => (
                 <li className="mb-2 ">
                     {/* <p>{index + 1} </p> */}
 

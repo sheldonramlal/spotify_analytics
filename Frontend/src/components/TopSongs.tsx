@@ -64,7 +64,7 @@ function TopSongs() {
             <p className="mb-16 text-5xl">Your Top 3 Songs are "<span className="font-bold ">{topThreeSongs[0]?.name}</span>", "<span className="font-bold ">{topThreeSongs[1]?.name}</span>", and "<span className="font-bold ">{topThreeSongs[2]?.name}</span>".  </p>
 
             <ul className="grid grid-cols-1 grid-rows-3 gap-5 md:grid-cols-2 lg:grid-cols-5">
-            {topSongs?.items.map((song, index) => (
+            {topSongs?.items.map((song) => (
                 <li className="mb-2 ">
                     {/* <p>{index + 1} </p> */}
 

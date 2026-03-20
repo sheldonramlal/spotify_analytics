@@ -12,7 +12,7 @@ function SongSkeleton() {
             <div className="w-4/5 h-12 mb-16 bg-white/20 animate-pulse"> </div>
 
             <ul className="grid grid-cols-1 grid-rows-3 gap-5 md:grid-cols-2 lg:grid-cols-5">
-           {Array.from({ length: 20 }).map((_, i) => (
+           {Array.from({ length: 20 }).map((_) => (
                 <li className="mb-2 ">
                     {/* <p>{index + 1} </p> */}
 
