@@ -1,6 +1,8 @@
 function Login() {
+
+  const API_URL = import.meta.env.VITE_API_URL
   const handleLogin = () => {
-    window.location.href = "http://127.0.0.1:8000/login";
+    window.location.href = `${API_URL}/login`;
   };
 
   return (

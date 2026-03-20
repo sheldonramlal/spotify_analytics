@@ -1,5 +1,6 @@
 
 function Logout() {
+    
     const handleLogout = () => {
         localStorage.removeItem("jwt_token");
         window.location.href = "/"
