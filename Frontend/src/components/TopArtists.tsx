@@ -56,7 +56,7 @@ function TopArtists() {
         
     <section  className='my-20 md:my-10'>
         <div className='px-5 mb-16 md:px-16'>
-            <h2 className='text-5xl font-medium tracking-tight text-white md:text-7xl'>Your Most Listened Artists</h2>
+            <h2 className='mb-8 text-5xl font-medium tracking-tight text-white md:text-7xl'>Your Most Listened Artists</h2>
 
             <select value={timeRange} onChange={(e) => setTimeRange(e.target.value)} className="p-3 bg-black border">
                     <option value="short_term">Last Month</option>
