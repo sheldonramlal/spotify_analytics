@@ -58,11 +58,11 @@ function TopArtists() {
         <div className='px-5 mb-16 md:px-16'>
             <h2 className='text-5xl font-medium tracking-tight text-white md:text-7xl'>Your Most Listened Artists</h2>
 
-          <select value={timeRange} onChange={(e) => setTimeRange(e.target.value)} className="p-3 mb-16 bg-black border">
-                  <option value="short_term">Last Month</option>
-                  <option value="medium_term">Last 6 Months</option>
-                  <option value="long_term">Last Year</option>
-          </select>
+            <select value={timeRange} onChange={(e) => setTimeRange(e.target.value)} className="p-3 bg-black border">
+                    <option value="short_term">Last Month</option>
+                    <option value="medium_term">Last 6 Months</option>
+                    <option value="long_term">Last Year</option>
+            </select>
         </div>
 
       {loading ? <TopArtistsSkeleton /> : (
