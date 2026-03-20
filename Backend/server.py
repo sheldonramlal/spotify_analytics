@@ -157,7 +157,7 @@ async def get_user(authorization: str = Header(...), db: Session = Depends(get_d
     return response.json()
 
 @app.get("/top-artists")
-async def get_top_artists(authorization: str = Header(...), db: Session = Depends(get_db)):
+async def get_top_artists(authorization: str = Header(...), db: Session = Depends(get_db), time_range: str = "medium_term"):
 
     token = authorization.split(" ")[1]
 
@@ -172,6 +172,7 @@ async def get_top_artists(authorization: str = Header(...), db: Session = Depend
             },
             params={
                 "limit": 10,
+                "time_range" : time_range
             }            
         )
     return response.json()

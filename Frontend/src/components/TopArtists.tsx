@@ -22,6 +22,8 @@ function TopArtists() {
 
    const [topArtists, setTopArtists] = useState<TopArtists | null>(null);
    const [loading, setLoading] = useState(true)
+   const [timeRange, setTimeRange] = useState<string>("medium_term");
+
    const API_URL = import.meta.env.VITE_API_URL
 
    useEffect(() => {
@@ -30,7 +32,7 @@ function TopArtists() {
     setLoading(true)
     const fetchTopArtists = async () => {
         try {
-            const response = await fetch(`${API_URL}/top-artists`, {
+            const response = await fetch(`${API_URL}/top-artists?time_range=${timeRange}`, {
                 headers: {
                    Authorization: `Bearer ${token}`
                 }
@@ -56,6 +58,12 @@ function TopArtists() {
         <div className='px-5 mb-16 md:px-16'>
             <h2 className='text-5xl font-medium tracking-tight text-white md:text-7xl'>Your Most Listened Artists</h2>
         </div>
+
+        <select value={timeRange} onChange={(e) => setTimeRange(e.target.value)} className="p-3 mb-16 bg-black border">
+                <option value="short_term">Last Month</option>
+                <option value="medium_term">Last 6 Months</option>
+                <option value="long_term">Last Year</option>
+        </select>
 
       {loading ? <TopArtistsSkeleton /> : (
 
