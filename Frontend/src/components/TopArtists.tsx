@@ -47,7 +47,7 @@ function TopArtists() {
     }
 
     fetchTopArtists();
-   }, [])
+   }, [timeRange])
 
     return(
       <>
